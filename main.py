@@ -10,7 +10,7 @@ def index():
     
     html_head = \
         '<head>' + \
-        '<title>Farm2 - Het nutteloze programma</title>' + \
+        '<title>Farm - Het nutteloze programma</title>' + \
         '<style>' + \
         '   body {' + \
         '       background-color: #E6E6FA;' + \
@@ -20,8 +20,8 @@ def index():
 
     html_body = \
         '<body>' + \
-        '<h1>Farm2</h1>' + \
-        '<p>Farm2 is het programma waarmee de werking van een deploy pipeline wordt aangetoond.</p>' + \
+        '<h1>Farm</h1>' + \
+        '<p>Farm is het programma waarmee de werking van een deploy pipeline wordt aangetoond.</p>' + \
         '<p>Hopelijk werkt het nu eindelijk een keer.</p>'
 
     for y in range(1, 11):
