@@ -26,7 +26,7 @@ jobs:
         host: 178.128.255.105
         USERNAME: root
         PORT: 22
-        KEY: ${{ secrets.SSH_PRIVATE_KEY_3 }}
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         script: sh /home/scripts/deploy_farm.sh
 
 
