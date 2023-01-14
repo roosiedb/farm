@@ -1,5 +1,6 @@
 [![Test and Deploy](https://github.com/LiekeG9/farm/actions/workflows/main.yml/badge.svg)](https://github.com/LiekeG9/farm/actions/workflows/main.yml)
 
+Website Farm: http://178.128.255.105
 
 # farm
 
@@ -14,7 +15,8 @@ Technische info
 
 VPS via Digital Ocean
 ---------------------
-Het opzetten van een Droplet met Ubuntu 20.04 LTS via DigitalOcean.com vereist geen bijzondere vaardigheden. De wizard leidde me door het proces en zodra de VPS beschikbaar kwam werd ook direct het IP adres getoond en kon ik met één muisklik een Console openen.
+Het opzetten van een Droplet met Ubuntu 20.04 LTS via DigitalOcean.com vereist geen bijzondere vaardigheden. De wizard leidde me door het proces en zodra de VPS beschikbaar kwam werd ook direct het IP adres getoond (178.128.255.105) en kon ik met één muisklik een Console openen.
+Vanuit de Console heb ik de stappen gevolgd om de verscheidene applicaties te installeren en te configureren, zoals NGINX, GUnicorn, Python, etc.
 
 Bash Script
 -----------
