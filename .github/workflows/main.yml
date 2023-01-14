@@ -16,3 +16,17 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        host: 178.128.255.105
+        USERNAME: root
+        PORT: 22
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: sh /home/scripts/deploy_farm.sh
+
+# test
