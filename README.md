@@ -18,11 +18,11 @@ Het opzetten van een Droplet met Ubuntu 20.04 LTS via DigitalOcean.com vereist g
 
 Bash Script
 -----------
-Op de Droplet bij Digital Ocean moest ik een Bash script maken waarmee de applicatie vanuit GitHub kon worden gedownload. In eerste instantie heb ik hier telkens een nieuwe Clone gedraaid, maar uiteindelijk bleek het voldoende om alleen een Pull opdracht uit te voeren. Dit script kon vanuit de Console getest worden en stond daarna dus klaar om vanuit een GitHub Action gebruikte te gaan worden. In het begin had ik nog wat problemen met het navigeren naar de juiste map, om vanuit die map de gewenste opdrachten te initieren. Het gebruik van 'echo' bleek erg handig omdat de output hiervan direct zichtbaar werd in de log van de workflow in GitHub.
+Op de Droplet bij Digital Ocean moest ik een Bash script maken waarmee de applicatie vanuit GitHub kon worden gedownload. In eerste instantie heb ik hier telkens een nieuwe Clone gedraaid, maar uiteindelijk bleek het voldoende om alleen een Pull opdracht uit te voeren. Dit script kon vanuit de Console getest worden en stond daarna dus klaar om vanuit een GitHub Action gebruikt te gaan worden. In het begin had ik nog wat problemen met het navigeren naar de juiste map, om vanuit die map de gewenste opdrachten te initieren. Het gebruik van 'echo' bleek erg handig omdat de output hiervan direct zichtbaar werd in de log van de workflow in GitHub.
 
 GitHub Workflow & Actions
 -------------------------
-Vanuit de repository in GitHub heb ik een workflow (.yml) aangemaakt met behulp van Actions. Met deze Actions kon ik de CD Pipeline volledig automatiseren. Het maken van deze workflow ging relatief soepel. Ik heb gebruik gemaakt van 2 stappen, namelijk (1) testen en (2) deployment, en ik heb deze los van elkaar kunnen uitproberen. GitHub ondersteunt prima mogelijkheden om vastgelopen onderdelen opnieuw uit te voeren en om in te zoomen op de uitgevoerde processen (inclusief foutmeldingen).
+Vanuit de repository in GitHub heb ik een workflow (.yml) aangemaakt voorzien van Actions. Met deze Actions kon ik de CD Pipeline volledig automatiseren. Het maken van deze workflow ging relatief soepel. Ik heb gebruik gemaakt van 2 stappen, namelijk (1) testen en (2) deployment, en ik heb deze los van elkaar kunnen uitproberen. GitHub ondersteunt prima mogelijkheden om vastgelopen onderdelen opnieuw uit te voeren en om in te zoomen op de uitgevoerde processen (inclusief foutmeldingen).
 
 SSH sleutels
 ------------
