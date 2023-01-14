@@ -11,16 +11,18 @@ De grootste uitdagingen voor mij bestonden uit het werkend krijgen van de autori
 
 Technische info
 ===============
+
 VPS via Digital Ocean
 ---------------------
 Het opzetten van een Droplet met Ubuntu 20.04 LTS via DigitalOcean.com vereist geen bijzondere vaardigheden. De wizard leidde me door het proces en zodra de VPS beschikbaar kwam werd ook direct het IP adres getoond en kon ik met 1 muisklik een Console openen.
 
-GitHub Actions
---------------
-
-
 Bash Script
 -----------
+Op de Droplet bij Digital Ocean moest ik een Bash script maken waarmee de applicatie vanuit GitHub kon worden gedownload. In eerste instantie heb ik hier telkens een nieuwe Clone gedraaid, maar uiteindelijk bleek het voldoende om alleen een Pull opdracht uit te voeren. Dit script kon vanuit de Console getest worden en stond daarna dus klaar om vanuit een GitHub Action gebruikte te gaan worden.
+
+GitHub Actions
+--------------
+Het maken van de workflow in GitHub ging relatief soepel, behalve het onderdeel SSH. Ik heb gebruik gemaakt van 2 stappen, namelijk (1) testen en (2) deployment, en ik heb deze los van elkaar kunnen testen. GitHub ondersteunt prima mogelijkheden om onderdelen opnieuw uit te voeren en om in te zoomen op de uitgevoerde processen (inclusief foutmeldingen).
 
 Bijzondere resultaten
 =====================
