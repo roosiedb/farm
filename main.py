@@ -20,7 +20,7 @@ def index():
 
     html_body = \
         '<body>' + \
-        '<h1>Farm</h1>' + \
+        '<h1>Farm - voor al uw dieren</h1>' + \
         '<p>Farm is het programma waarmee de werking van een deploy pipeline wordt aangetoond.</p>' + \
         '<p>Hopelijk werkt het nu eindelijk een keer.</p>'
 
