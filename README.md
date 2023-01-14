@@ -14,15 +14,19 @@ Technische info
 
 VPS via Digital Ocean
 ---------------------
-Het opzetten van een Droplet met Ubuntu 20.04 LTS via DigitalOcean.com vereist geen bijzondere vaardigheden. De wizard leidde me door het proces en zodra de VPS beschikbaar kwam werd ook direct het IP adres getoond en kon ik met 1 muisklik een Console openen.
+Het opzetten van een Droplet met Ubuntu 20.04 LTS via DigitalOcean.com vereist geen bijzondere vaardigheden. De wizard leidde me door het proces en zodra de VPS beschikbaar kwam werd ook direct het IP adres getoond en kon ik met één muisklik een Console openen.
 
 Bash Script
 -----------
-Op de Droplet bij Digital Ocean moest ik een Bash script maken waarmee de applicatie vanuit GitHub kon worden gedownload. In eerste instantie heb ik hier telkens een nieuwe Clone gedraaid, maar uiteindelijk bleek het voldoende om alleen een Pull opdracht uit te voeren. Dit script kon vanuit de Console getest worden en stond daarna dus klaar om vanuit een GitHub Action gebruikte te gaan worden.
+Op de Droplet bij Digital Ocean moest ik een Bash script maken waarmee de applicatie vanuit GitHub kon worden gedownload. In eerste instantie heb ik hier telkens een nieuwe Clone gedraaid, maar uiteindelijk bleek het voldoende om alleen een Pull opdracht uit te voeren. Dit script kon vanuit de Console getest worden en stond daarna dus klaar om vanuit een GitHub Action gebruikte te gaan worden. In het begin had ik nog wat problemen met het navigeren naar de juiste map, om vanuit die map de gewenste opdrachten te initieren. Het gebruik van 'echo' bleek erg handig omdat de output hiervan direct zichtbaar werd in de log van de workflow in GitHub.
 
-GitHub Actions
---------------
-Het maken van de workflow in GitHub ging relatief soepel, behalve het onderdeel SSH. Ik heb gebruik gemaakt van 2 stappen, namelijk (1) testen en (2) deployment, en ik heb deze los van elkaar kunnen testen. GitHub ondersteunt prima mogelijkheden om onderdelen opnieuw uit te voeren en om in te zoomen op de uitgevoerde processen (inclusief foutmeldingen).
+GitHub Workflow & Actions
+-------------------------
+Vanuit de repository in GitHub heb ik een workflow (.yml) aangemaakt met behulp van Actions. Met deze Actions kon ik de CD Pipeline volledig automatiseren. Het maken van deze workflow ging relatief soepel. Ik heb gebruik gemaakt van 2 stappen, namelijk (1) testen en (2) deployment, en ik heb deze los van elkaar kunnen uitproberen. GitHub ondersteunt prima mogelijkheden om vastgelopen onderdelen opnieuw uit te voeren en om in te zoomen op de uitgevoerde processen (inclusief foutmeldingen).
+
+SSH sleutels
+------------
+Om ervoor te zorgen dat alleen geautoriseerde gebruikers toegang hebben tot de VPS (Droplet) bij Digital Ocean en ook tot de repository van GitHub, heb ik SSH sleutels aangemaakt. De SSH key moest vervolgens geactiveerd worden, en een deel moest ook in GitHub terecht komen op een manier zodat het veilig blijft (secrets). Een van de problemen waar ik tegenaan liep was dat ik vergat om op de VPS het publieke deel aan /root/.ssh/authorized_keys toe te voegen. Dit leverde dan telkens een foutieve 'handshake' op.
 
 Bijzondere resultaten
 =====================
