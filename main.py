@@ -22,7 +22,7 @@ def index():
         '<body>' + \
         '<h1>Farm - voor al uw dieren</h1>' + \
         '<p>Farm is het programma waarmee de werking van een deploy pipeline wordt aangetoond.</p>' + \
-        '<p>Laatste wijziging: 14-1-2023, 15:09.</p>'
+        '<p>Laatste wijziging: 14-1-2023, 15:17.</p>'
 
     for y in range(1, 11):
         html_body = html_body + '<h2>Hoofdstuk ' + str(y) + '</h2>'
