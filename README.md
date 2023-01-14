@@ -27,3 +27,5 @@ Het maken van de workflow in GitHub ging relatief soepel, behalve het onderdeel 
 Bijzondere resultaten
 =====================
 Toen de CD Pipeline eindelijk werkte kreeg ik tijdens een van de tests een lege webpagina in beeld en kon ik eerst niet bedenken wat de oorzaak was. Toen ik via "Paginabron weergeven" ontdekte dat de nieuwste HTML file goed was uitgerold, en dus dat het CD proces zelf zijn werk had gedaan, moest de fout ergens anders zitten. Na wat puzzelwerk bleek ik een aanhalingsteken te zijn vergeten. Een belangrijke voetnoot is daarom dat de technische staat van een applicatie prima in orde kan zijn terwijl er praktisch toch nog problemen kunnen optreden als gevolg van niet-geteste onderdelen. Zelfs bij een automatisch CD proces blijft dus een handmatige check (openen/verversen webpagina) essentieel.
+
+Laatste wijziging: 14-1-2023, 15:40
